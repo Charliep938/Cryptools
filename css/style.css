@@ -1,0 +1,629 @@
+/* CP 01/22 STYLES*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    margin:0;
+    padding:0;
+    font-family: 'Nunito', Arial, Helvetica, sans-serif;
+    letter-spacing:.1rem;
+}
+
+h1 {
+    font-size: 5rem;
+    margin:0;
+    text-align: center;
+    color:#ffffff;
+    font-family: 'Anton', Arial, Helvetica, sans-serif;
+    letter-spacing: .3rem;
+}
+
+p {
+    font-size: 1.5rem;
+    margin:0;
+    text-align: center;
+    color:#ffffff;
+}
+
+/* UNIVERSAL STYLES */
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.white {
+    color:#ffffff;
+}
+
+.red-section {
+    background-color: #e03434;
+}
+
+.margin2 {
+    margin:2rem;
+}
+
+.margin4 {
+    margin:4rem;
+}
+
+.margin5 {
+    margin:5rem;
+}
+
+.margin5top0bottom0 {
+    margin:0 5rem;
+}
+
+.padding5 {
+    padding: 5rem;
+}
+
+.padding1bottom {
+    padding: 0 1rem 1rem 1rem !important;
+}
+
+/* NAVIGATION BAR */
+/* NAV LOGO */
+.logo {
+    color:#e03434;
+    font-size: 2.5rem;
+    margin: .5rem .5rem .5rem .0rem;
+    font-family: 'Anton', Arial, Helvetica, sans-serif;
+    
+}
+
+.logo a {
+    color:#e03434;
+    text-decoration: none;
+}
+
+.LogoBlack {
+    color:#ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color:#222222;
+    margin: 0;
+    position: fixed;
+    width:100%;
+    z-index: 9999999;
+}
+
+.navbar-links ul {
+    margin:0;
+    padding:0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color:#ffffff;
+    letter-spacing:.1rem;
+    padding: 1rem 1.5rem;
+    display: block;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+
+.navbar-links a:hover {
+    color:#e03434;
+    transition: 0.2s ease-in;
+}
+
+/* NAVBAR WHEN SCROLLED VIA JS */
+.navbar-fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 500ms linear;
+}
+
+.navbar-fixed-top.scrolled span,
+.navbar-fixed-top.scrolled .navbar-links a {
+    color:#222222;
+}
+
+.navbar-fixed-top.scrolled .navbar-links a:hover {
+    color:#e03434;
+    transition: 0.2s ease-in;
+}
+
+.navbar-fixed-top-dark {
+    background-color: #222222 !important;
+}
+
+/* NAV HOVER STYLES*/
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #e03434;
+  }
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #e03434;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* OVERLAY MENU BUTTON */
+.toggle-button {
+    position: absolute;
+    top: 1.75rem;
+    right: 3rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height:22px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #e03434;
+    border-radius: 10px;
+}
+
+/* SWIPER */
+
+.swiper {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:15rem;
+}
+
+/* BUTTONS */
+/* STANDARD */
+.btn {
+    position: relative;
+    display: inline-block;
+    width: 277px;
+    height: 50px;
+    font-size: 1em;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration:none;
+    font-weight:900;
+}
+
+.btn svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn svg rect {
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.btn span{
+  color:#ffffff;
+}
+
+.btn:hover svg rect {
+    stroke-width: 2;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}
+
+/* ALTERNATE BUTTON */
+.btn-alt {
+    position: relative;
+    display: inline-block;
+    width: 277px;
+    height: 50px;
+    font-size: 1em;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration:none;
+    font-weight:900;
+}
+
+.btn-alt svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn-alt svg rect {
+    stroke: #e03434;
+    stroke-width: 2;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.btn-alt span{
+  color:#e03434;
+}
+
+.btn-alt:hover svg rect {
+    stroke-width: 2;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}
+
+/* SPLASH STYLES */
+.splash-container {
+    background-color: #ffffff;
+    background-image: url("../img/splash.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.splash-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.padding-splash {
+    padding:15rem 13rem 13rem 13rem;
+}
+
+.splash-inner p {
+    padding:1rem .7rem 2rem .7rem;
+}
+
+.splash-buttons {
+    text-align: center;
+}
+
+/* INDEX STYLES */
+.section-image {
+    display: flex;
+    justify-content: center;
+}
+
+/* INDEX-CALCULATOR SECTION*/
+.section-calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-calculator-inner h1 {
+    color:#ffffff;
+}
+
+.section-calculator-padding {
+    padding: 0 1rem 1.5rem 1rem;
+}
+
+/* INDEX-CRYPTO RATES SECTION*/
+.section-cryptoRates-inner h1 {
+    color:#e03434;
+}
+
+.section-cryptoRates-inner h1 a {
+    color:#e03434;
+    text-decoration: none;
+}
+
+.section-cryptoRates-inner p {
+    color:#e03434;
+    padding: 0 1rem 1.5rem 1rem;
+}
+
+/* CALCULATOR LANDING PAGE */
+
+.landing-p-intro {
+    color:#222222;  
+    font-size:1rem;
+    margin: 0rem;
+}
+
+.landing-p {
+    color:#222222;  
+    font-size:1rem;
+    margin: 1.6rem 0.5rem 0 0.5rem;
+}
+
+/* CALCULATOR PAGE STYLE*/
+.profit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10rem 1rem 7rem 1rem;
+}
+
+.profit-container h1 {
+    color:#e03434;
+    padding: 0 2rem;
+}
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app-container input {
+    padding: 1rem;
+    margin:1rem;
+    color:#ffffff;
+    border-radius: 5px;
+}
+
+
+.app-container button {
+    background-color: #e03434;
+    padding: .6rem 2rem;
+    border: 1px solid #e03434;
+    border-radius: 5px;
+    cursor: pointer;
+    color:#ffffff;
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+#form-container > a {
+    margin-top: 1rem;
+}
+
+/* FORM STYLING */
+
+form {
+    padding:0 1rem;
+    text-align: center;
+}
+
+input, form textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    border: 3px solid #e03434;
+    padding: 1rem;
+    text-align: center;
+    background-color: #e03434;
+    color:#ffffff;
+    border-radius: 5px;
+}
+
+::placeholder {
+    color:#ffffff80;
+}
+
+/* FORM RESULTS STYLES */
+.results {
+    text-align: center;
+    padding-top: 1.2rem;
+    transition: 3s;
+}
+
+.results-yearlycost, .results-yearlyprofit {
+    border-bottom: 2px solid #e03434;
+    padding-bottom: 1rem;
+}
+
+.results-dailyprofit, .results-dailyprofit-bills {
+    padding-top: 1rem;
+}
+
+/* CRYPTO RATES PAGE STYLES*/
+
+.crypto-rates-container p {
+    padding-top: 1rem;
+}
+
+/* CONTACT PAGE STYLES*/
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10rem 1rem 7rem 1rem;
+}
+
+.contact-container h1 {
+    color:#e03434;
+}
+
+.contact-container button {
+    background-color: #e03434;
+    padding: .6rem 2rem;
+    border: 1px solid #e03434;
+    border-radius: 5px;
+    cursor: pointer;
+    color:#ffffff;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container p {
+    padding: 1rem;
+    color:#222222;
+    font-size:1rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: #222222;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:2rem;
+}
+
+.logo-footer {
+    color:#e03434;
+    font-size: 2.5rem;
+    margin: .5rem;
+    font-family: 'Anton', Arial, Helvetica, sans-serif;
+}
+
+.logo-footer a {
+    color:#e03434;
+    text-decoration: none;
+}
+
+.socials a {
+    padding:0 0.2rem;
+    text-decoration: none;
+}
+
+.socials img {
+    height:40px;
+}
+
+.sig p {
+    padding-top:.9rem;
+    font-size:.7rem;
+}
+
+@media (max-width: 600px) {
+    .swiper-slide h1 {
+        font-size:3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    /* HAMBURGER MENU */
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 3rem;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links a {
+        padding: 1rem;
+    }
+    .form-container {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 3rem !important;
+    }
+}
+
+
+@media (max-width: 1156px) {
+    .margin5top0bottom0 {
+        margin: 0 5rem 5rem 5rem;
+    }
+}
+
+/* The Overlay (background) */
+.overlay { 
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999999999999999;
+    left: 0;
+    top: 0;
+    background-color: #222222;
+    overflow-x: hidden;
+    transition: 0.1s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: -10px;
+    right: 34px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
