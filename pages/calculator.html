@@ -1,0 +1,144 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYPTOOLS</title>
+    <link rel="stylesheet" href="../css/preloader.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/coingecko.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="loading"></div>
+    <nav class="navbar navbar-fixed-top-dark">
+        <div class="logo">
+            <a href="../index.html">
+                <span class="LogoBlack">CRYP</span>TOOLS
+            </a>
+        </div>
+        <a href="#" class="toggle-button" onclick="openNav()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="calculatorLandingPage.html" class="hover-underline-animation">Mining Profit Calculator</a></li>
+                <li><a href="cryptorates.html" class="hover-underline-animation">Crypto Rates</a></li>
+                <li><a href="contact.html" class="hover-underline-animation">Contact</a></li>
+            </ul>
+        </div>
+        <div id="overlayNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="calculatorLandingPage.html" >Mining Profit Calculator</a>
+                <a href="cryptorates.html" >Crypto Rates</a>
+                <a href="contact.html" >Contact</a>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="profit-container">
+            <h1>MINING PROFIT CALCULATOR</h1>
+            <div class="app-container">
+                <div id="form-container" class="form-container">
+                    <div class="row">
+                        <input id="DailyRate" type="text" placeholder="Your Daily Electricity Rate. Eg 0.206">
+                        <input id="NightlyRate" type="text" placeholder="Your Nightly Electricity Rate. Eg 0.147">
+                        <input id="DailyHours" type="text" placeholder="Number of hours used at Daily rate Eg 17">
+                    </div>
+                    <div class="row">
+                        <input id="NightlyHours" type="text" placeholder="Number of hours used at Nightly rate Eg 7">
+                        <input id="TotalPowerWattage" type="text" placeholder="Total Power Usage">
+                        <input id="EstimatedProfitsPerDay" type="text" placeholder="Estimated daily profit per day">
+                    </div>
+                    <p>Use <a href="https://2cryptocalc.com/gpu/24h?" style="color:#e03434;font-weight:bold;" target="_blank">https://2cryptocalc.com/gpu/24h?</a>  to calculate estimated daily earnings per GPU.</p>
+                    <p class="padding1bottom">Make sure to include additional equipment power usage such as any extra fans, motherboard, etc.</p>
+                    <a class="btn-alt" onclick="returnText();removeForm();">
+                        <svg width="277" height="62">
+                            <defs>
+                                <linearGradient id="grad2">
+                                    <stop offset="0%" stop-color="#e03434" />
+                                    <stop offset="100%" stop-color="#e03434" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad2)" width="266" height="50"></rect>
+                        </svg>
+                        <span>Submit</span>
+                    </a>
+                </div>
+                <div id="results" class="results">
+                    <div class="costs">
+                        <div id="results-dailycost"></div>
+                        <div id="results-weeklycost"></div>
+                        <div id="results-monthlycost"></div>
+                        <div id="results-yearlycost"></div>
+                    </div>
+                    <div class="profit">
+                        <div id="results-dailyprofit"></div>
+                        <div id="results-weeklyprofit"></div>
+                        <div id="results-monthlyprofit"></div>
+                        <div id="results-yearlyprofit"></div>
+                    </div>
+                    <div class="profit-bills">
+                        <div id="results-dailyprofit-bills"></div>
+                        <div id="results-weeklyprofit-bills"></div>
+                        <div id="results-monthlyprofit-bills"></div>
+                        <div id="results-yearlyprofit-bills"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="logo-footer">
+                <a href="../index.html">
+                    <span class="LogoBlack">CRYP</span>TOOLS
+                </a>
+            </div>
+            <div class="socials">
+                <a href="">
+                    <img src="../img/facebook.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../img/twitter.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../img/instagram.png" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../JS/calculator.js" ></script>
+    <script>
+        /* Open when someone clicks on the span element */
+        function openNav() {
+            document.getElementById("overlayNav").style.width = "100%";
+            document.getElementById("overlayNav").style.opacity = "100%";
+        }
+
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeNav() {
+            document.getElementById("overlayNav").style.width = "0%";
+            document.getElementById("overlayNav").style.opacity = "0%";
+        }
+    </script>
+    <script>
+        $(window).on('load', function () {
+            $(".loading").fadeOut("slow");
+        });  
+    </script>
+</body>
+
+</html>
